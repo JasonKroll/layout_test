@@ -1,7 +1,53 @@
+$brand-primary: #9ACD32;
+$brand-primary-light: #c9e491;
+$brand-primary-lighter: #e8f3d0;
+$brand-primary-lightest: #f7fbef;
+$grid-gutter-width: 10px;
+$body-bg: #eee;
+/*$body-bg: #987;*/
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
 .footer {
   background-color: $navbar-inverse-bg;
-	
+}
+
+.content {
+  padding: 25px 0px;
+  margin: 10px 2px;
+}
+
+.masthead {
+  background-color: $brand-primary-lighter;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 30px;
+  margin-top: 50px;
+  padding: 60px 48px;
+  font-size: ceil(($font-size-base * 1.5));
+  border-bottom: 2px solid #fff;
+  /*margin-top: -5px;*/
+}
+.panel {
+  border-color: #d2d2d2;
+  box-shadow:0 1px 0 #cfcfcf;
+  border-radius:3px;
+}
+  
+.sidebar {
+  width: 20%;
+}
+
+@media screen and (min-width: $screen-md-min) {
+  .content {
+    padding: 50px 15px 0;
+    margin: 30px 30px;
+  }
+}
+@media screen and (min-width: $screen-sm-min) {
+ div[class*="col-"] {
+    padding-left: 15px;
+    padding-right: 15px;
+
+  }
 }
