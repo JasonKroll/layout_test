@@ -8,8 +8,15 @@ $body-bg: #eee;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.navbar {
+  margin-bottom: 0px;
+}
 .footer {
   background-color: $navbar-inverse-bg;
+}
+
+#page-content {
+  margin-top: 50px;
 }
 
 .content {
@@ -18,14 +25,15 @@ $body-bg: #eee;
 }
 
 .masthead {
+  position: relative;
   background-color: $brand-primary-lighter;
   text-align: center;
   width: 100%;
   margin-bottom: 30px;
-  margin-top: 50px;
   padding: 60px 48px;
   font-size: ceil(($font-size-base * 1.5));
   border-bottom: 2px solid #fff;
+  border-top: 1px solid red;
   /*margin-top: -5px;*/
 }
 .panel {

@@ -17,56 +17,49 @@
 
 	<!-- Fixed navbar -->
 	<%= render 'static/fixed_navbar' %>
-
-	<% if flash.present? %>
-		<% if notice.present? %>
-			<p class="notice"><%= notice %></p>
-		<% end %>
-		<% if alert.present? %>
-			<p class="alert"><%= alert %></p>
-		<% end %>
-	<% end %>
-
-	<!-- Hero unit when not logged in -->
-	<% if !user_signed_in? %>
-		<%= yield(:show_welcome) %>
-
-		<!-- Begin page content -->
-		<div class="content">
-			<div class="container-fluid">
-				<%= yield %>
+	<div id="page-content">
+		<!-- Hero unit when not logged in -->
+		<% if !user_signed_in? %>
+			<%= yield(:show_welcome) %>
+			<!-- Begin page content -->
+			<div class="content">
+				<div class="container-fluid">
+					<%= yield %>
+				</div>
 			</div>
-		</div>
-	<% else %>
-		<div class="content">
-			<div class="container-fluid">
-				<div class="row">
-					<div class="col-sm-9">
-						<%= yield %>
-					</div>
-					<div class="hidden-xs col-sm-3">
-						<%= render 'layouts/sidebar' %>
+		<% else %>
+			<div class="content">
+				<%= render 'layouts/flash' %>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-sm-9">
+							<%= yield %>
+						</div>
+						<div class="hidden-xs col-sm-3">
+							<%= render 'layouts/sidebar' %>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	<% end %>
+		<% end %>
+	
+		<!-- Footer -->
+		<footer class="footer">
+		  <div class="container">
+		    <p class="text-muted">Place sticky footer content here.</p>
+		  </div>
+		</footer>
 
-	<!-- Footer -->
-	<footer class="footer">
-	  <div class="container">
-	    <p class="text-muted">Place sticky footer content here.</p>
-	  </div>
-	</footer>
-
+	</div>
+	
 
 	<!-- Bootstrap core JavaScript
 	================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="../../dist/js/bootstrap.min.js"></script>
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+	<!--<script src="../../dist/js/bootstrap.min.js"></script>-->
 	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-	<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+	<!--<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>-->
 
 
 	</body>
