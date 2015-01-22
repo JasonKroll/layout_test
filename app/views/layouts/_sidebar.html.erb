@@ -5,11 +5,11 @@
   <div class="panel-body">
     <div class="" id="sidebar" role="navigation">
       <ul class="nav">
-        <li><%= link_to "First Link", root_path %></li>
+        <li><%= link_to "Home", root_path %></li>
         <li><%= link_to "Second Link", root_path %></li>
         <li><%= link_to "Third Link", root_path %></li>
         <li><%= link_to "Fourth Link", root_path %></li>
-        <li><%= link_to "Fith Link", root_path %></li>
+        <li><%= link_to_if user_signed_in?, "Sign out",  destroy_user_session_path, method: :delete  %></li>
       </ul>
     </div>
   </div>
